@@ -17,3 +17,12 @@ test("Login", async ({ page }) => {
   const openMenu = page.locator("id=react-burger-menu-btn");
   await openMenu.click();
 });
+
+test("Logout", async ({ page }) => {
+  const openMenu = page.locator("id=react-burger-menu-btn");
+  await openMenu.click();
+});
+
+test.afterEach(async ({ page }) => {
+  await page.close();
+});
