@@ -24,4 +24,6 @@ test("Login Demo 2", async ({ page }) => {
   await password.fill("admin");
   const loginButton = page.locator("//button[text()='Log in']");
   await loginButton.click();
+  const logoutButton = page.locator("//a[text()='Logout']");
+  await logoutButton.click();
 });
